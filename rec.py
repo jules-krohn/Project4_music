@@ -31,12 +31,12 @@ if __name__ == "__main__":
     user_artists_matrix = collaborative_filtering.create_user_artists_matrix(user_artists_df)
 
     # Instantiate ALS using implicit
-    implicit_model = implicit.als.AlternatingLeastSquares(factors=50, iterations=10, regularization=0.01)
+    implicit_model = implicit.als.AlternatingLeastSquares(factors=100, iterations=20, regularization=0.1)
 
     # Instantiate recommender, fit, and recommend
     recommender = ImplicitRecommender(collaborative_filtering, implicit_model)
     recommender.fit(user_artists_matrix)
-    artists, scores = recommender.recommend(45, user_artists_matrix, n=20)
+    artists, scores = recommender.recommend(615, user_artists_matrix, n=10)
 
     # Print results
     for artist, score in zip(artists, scores):
