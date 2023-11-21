@@ -13,13 +13,12 @@ class ImplicitRecommender:
     def fit(self, user_artists_matrix: csr_matrix) -> None:
         self.implicit_model.fit(user_artists_matrix)
 
-    def recommend(self, user_id: int, user_artists_matrix: csr_matrix, n: int = 50) -> Tuple[List[str], List[float]]:
+    def recommend(self, user_id: int, user_artists_matrix: csr_matrix, n: int = 10) -> Tuple[List[str], List[float]]:
         artist_ids, scores = self.implicit_model.recommend(user_id, user_artists_matrix.getrow(user_id), N=n)
         artists = [self.collaborative_filtering.get_artist_name_from_id(artist_id) for artist_id in artist_ids]
         return artists, scores
 
 if __name__ == "__main__":
-    # Instantiate CollaborativeFiltering
     collaborative_filtering = CollaborativeFiltering(
         user_artists_file=Path("../Resources/user_artists.csv"),
         artists_file=Path("../Resources/artists.csv")
@@ -37,9 +36,8 @@ if __name__ == "__main__":
     # Instantiate recommender, fit, and recommend
     recommender = ImplicitRecommender(collaborative_filtering, implicit_model)
     recommender.fit(user_artists_matrix)
-    artists, scores = recommender.recommend(2, user_artists_matrix, n=25)
+    artists, scores = recommender.recommend(45, user_artists_matrix, n=20)
 
     # Print results
     for artist, score in zip(artists, scores):
-        #print(f'For User {'userID'}:')
         print(f"{artist}: {score}")
