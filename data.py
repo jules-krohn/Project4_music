@@ -19,7 +19,7 @@ class CollaborativeFiltering:
         self.artist_names = dict(zip(artists_df['id'], artists_df['name']))
 
     def create_user_artists_matrix(self, user_artists_df):
-        # Implementation remains the same
+        
         unique_users = user_artists_df['userID'].unique()
         unique_artists = user_artists_df['artistID'].unique()
 
