@@ -13,6 +13,26 @@ Contributers:
 - Aron Lecznar
 - Natalia Phipps
 
+# Data Visualizations
+
+We wanted to create some visualizations in regards various music features and trends. The visualizations can be found in this tableau link: https://public.tableau.com/app/profile/aron3046/viz/Spotify_Song_Visualizations/Story1. Although this is a different dataset than the one we used in our model, it helped provide insights into how music has evolved over time. Here are a few screenshots of those visuals:
+
+1.) Features of music over time:
+
+![image](https://github.com/jules-krohn/Project4_music/assets/130694752/17a9a276-3cf2-4eb2-bac0-cd454af4dd75)
+
+ - This visual explores different music features and how they have evolved over time. The trend shows that acousticness has had an overall decrease, while features such as speechiness and loudness have increased.
+
+2.) Popularity based on attribute:
+
+![image](https://github.com/jules-krohn/Project4_music/assets/130694752/b3a375da-d930-476b-b0ac-fb6d6c6c5d6f)
+
+ - This visualization allows us to see how popularity changes depending on song features. Some features have a strong correlation with popularity such as loudness, while acousticness shows a negative correlation.
+
+
+
+
+
 ## The Dataset:
 The dataset is a library of networking, tagging, and music artist listening information from over 2,0000 users of the last.fm music system. The csv files we used were organized as:
 * A list of artists with a unique ID and url to their page on last.fm
@@ -25,6 +45,7 @@ The dataset is a library of networking, tagging, and music artist listening info
 
 - Python
 - SQL
+- tableau 
 - Pyspark
 - Implicit
 - Pandas
@@ -153,7 +174,13 @@ Our model was sucessfully able to generate 10 artist recommendations, however we
 
 # Resources 
 
+A lot of resources were used to help us research machine learning models, and we cannot include all of them as hours were dedicated to research. However, here are a few links that could help create a model similar to what we did.
+
 1.) [Build a spotify-like recommender system in python](https://www.youtube.com/watch?app=desktop&v=gaZKjAKfe0s)
+
+2.) [Building and Testing Recommender Systems With Surprise](https://towardsdatascience.com/building-and-testing-recommender-systems-with-surprise-step-by-step-d4ba702ef80b)
+
+4.) [How To Use The Surprise Library For Recommendation Engines](https://www.youtube.com/watch?v=fEd1p8-3S7w)
 
 
 
