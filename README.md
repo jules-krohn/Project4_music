@@ -89,9 +89,8 @@ _Initialization (Lines 52-62)_
 
  - It uses the `LightFM` library for collaborative filtering.
 
- - Methods include fitting the model (fit) and generating recommendations for a user (recommend).
-
- - Precision at k is calculated as a measure of model performance.
+ - Methods include fitting the model (fit), generating recommendations for a user (recommend), and calculating precision at k for model performance.
+ - Recommendations are also normalized between 0 and 1 using min-max scaling.
 
 **Data Loading and Processing**
 
@@ -161,7 +160,7 @@ After trying different parameters we got the precision up to 25%
 
 # Conclusion
 
-Our model was sucessfully able to generate 10 artist recommendations, however we were unable to get our preferred precision outcome. This project was a lot of trial and error when it came to our model and there are many things we would like to implement as next steps to improve our recommender. 
+Our model was sucessfully able to generate 10 artist recommendations using both models, however we were unable to get our preferred precision outcome. This project was a lot of trial and error when it came to our model's anaylsis and producing visualizations. There are many things we would like to implement as next steps to improve our recommender. 
 
 - Use a different dataset:
 
@@ -170,7 +169,17 @@ Our model was sucessfully able to generate 10 artist recommendations, however we
 - Implement a different type of collaborative filtering
 
    - for this model we used a user/item type of collaborative filtering, however, there are multiple types of collaborative filtering including item/item and user/user filtering. In the future, we could try to use a different type of filtering to train our model.
+   - Attempts to use more data (such as users tagging artists as genres, tempo, loudness, danceability, etc.) to generate a matrix proved outside our expertise
+of building the Collaborative Filtering class.
 
+-Improve our computing power for larger datasets and analysis:
+
+     - Anaylzing our model's performance was the last task item, the dataset and each model's overall function led to frequent crashes and serious drains 
+       on our RAM. Producing a significant output to analyze anything was either too outside our expertise or too much for our personal computers.
+
+     - Empirically, after playing with our hyperparamaters for both the implicit and lightFM recommender, we did notice the chosen user mostly had the 
+     same artists popping up in semi-similar rankings and about a +/- 5-10% variance in score. After tuning our hyperparamters in both implicit and 
+     LightFM models, the closest piece of analytical data was a precision score of 25% for our LightFM model
 
 # Resources 
 
