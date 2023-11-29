@@ -13,6 +13,8 @@ Contributers:
 - Aron Lecznar
 - Natalia Phipps
 
+Note: If you would like to run this recommender in your system, we recommend downloading the DataRecFinal.ipynb file and running it in google colab.
+
 # Data Visualizations
 
 We wanted to create some visualizations in regards various music features and trends. The visualizations can be found in this tableau link: https://public.tableau.com/app/profile/aron3046/viz/Spotify_Song_Visualizations/Story1. Although this is a different dataset than the one we used in our model, it helped provide insights into how music has evolved over time. Here are a few screenshots of those visuals:
@@ -44,7 +46,6 @@ The dataset is a library of networking, tagging, and music artist listening info
 ## Technologies
 
 - Python
-- SQL
 - tableau 
 - Pyspark
 - Implicit
@@ -172,14 +173,14 @@ Our model was sucessfully able to generate 10 artist recommendations using both 
    - Attempts to use more data (such as users tagging artists as genres, tempo, loudness, danceability, etc.) to generate a matrix proved outside our expertise
 of building the Collaborative Filtering class.
 
--Improve our computing power for larger datasets and analysis:
+- Improve our computing power for larger datasets and analysis:
 
-     - Anaylzing our model's performance was the last task item, the dataset and each model's overall function led to frequent crashes and serious drains 
-       on our RAM. Producing a significant output to analyze anything was either too outside our expertise or too much for our personal computers.
+  - Anaylzing our model's performance was the last task item, the dataset and each model's overall function led to frequent crashes and serious drains
+   on our RAM. Producing a significant output to analyze anything was either too outside our expertise or too much for our personal computers.
 
-     - Empirically, after playing with our hyperparamaters for both the implicit and lightFM recommender, we did notice the chosen user mostly had the 
-     same artists popping up in semi-similar rankings and about a +/- 5-10% variance in score. After tuning our hyperparamters in both implicit and 
-     LightFM models, the closest piece of analytical data was a precision score of 25% for our LightFM model
+  - Empirically, after playing with our hyperparamaters for both the implicit and lightFM recommender, we did notice the chosen user mostly had the
+   same artists popping up in semi-similar rankings and about a +/- 5-10% variance in score. After tuning our hyperparamters in both implicit and
+   LightFM models, the closest piece of analytical data was a precision score of 25% for our LightFM model
 
 # Resources 
 
