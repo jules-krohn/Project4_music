@@ -176,6 +176,7 @@ of building the Collaborative Filtering class.
 
      - Anaylzing our model's performance was the last task item, the dataset and each model's overall function led to frequent crashes and serious drains 
        on our RAM. Producing a significant output to analyze anything was either too outside our expertise or too much for our personal computers.
+       (Hence the need for install cupy-cuda11x: a NumPy/SciPy-compatible array library for GPU-accelerated computing with Python.)
 
      - Empirically, after playing with our hyperparamaters for both the implicit and lightFM recommender, we did notice the chosen user mostly had the 
      same artists popping up in semi-similar rankings and about a +/- 5-10% variance in score. After tuning our hyperparamters in both implicit and 
